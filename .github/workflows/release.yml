@@ -13,7 +13,7 @@ jobs:
     - name: Set up JDK 11 for x64
       uses: actions/setup-java@v3
       with:
-        java-version: '11'
+        java-version: '17'
         distribution: 'temurin'
         architecture: x64
 
@@ -22,3 +22,8 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        sh-passphrase: ${{ secrets.SSH_PASSPHRASE }}
+        gpg-enabled: true
+        gpg-key-id: ${{ secrets.GPG_KEY_ID }}
+        gpg-key: ${{ secrets.GPG_KEY }}
+        gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }} 
