@@ -2,6 +2,15 @@ name: Maven Release
 
 on:
   workflow_dispatch:
+    inputs:
+        releaseVersion:
+          description: "Define the release version"
+          required: true
+          default: ""
+        developmentVersion:
+          description: "Define the snapshot version"
+          required: true
+          default: ""
 
 jobs:
   release:
@@ -20,10 +29,12 @@ jobs:
     - name: Maven Release
       uses: qcastel/github-actions-maven-release@v1.12.41
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        sh-passphrase: ${{ secrets.SSH_PASSPHRASE }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        ssh-passphrase: ${{ secrets.SSH_PASSPHRASE }}
         gpg-enabled: true
         gpg-key-id: ${{ secrets.GPG_KEY_ID }}
         gpg-key: ${{ secrets.GPG_KEY }}
-        gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }} 
+        gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
+        maven-development-version-number: ${{ github.event.inputs.developmentVersion }}
+        maven-release-version-number: ${{ github.event.inputs.releaseVersion }}
