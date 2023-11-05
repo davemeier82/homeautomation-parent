@@ -39,3 +39,5 @@ jobs:
         maven-development-version-number: ${{ github.event.inputs.developmentVersion }}
         maven-release-version-number: ${{ github.event.inputs.releaseVersion }}
         release-branch-name: main
+      env:
+        JAVA_HOME: /usr/lib/jvm/java-17-openjdk/
