@@ -20,7 +20,7 @@
 
     <groupId>io.github.davemeier82.homeautomation</groupId>
     <artifactId>homeautomation-parent</artifactId>
-    <version>0.2.4</version>
+    <version>0.2.5-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
@@ -44,7 +44,7 @@
         <connection>scm:git:ssh://git@github.com/davemeier82/homeautomation-parent.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/davemeier82/homeautomation-parent.git</developerConnection>
         <url>https://github.com/davemeier82/homeautomation-parent</url>
-        <tag>homeautomation-parent-0.2.4</tag>
+        <tag>homeautomation-parent-0.2.3-SNAPSHOT</tag>
     </scm>
     <issueManagement>
         <system>GitHub</system>
