@@ -1,8 +1,16 @@
 name: Publish package to the Maven Central Repository
 
 on:
-  release:
-    types: [created]
+  workflow_dispatch:
+    inputs:
+      releaseVersion:
+        description: "Define the release version"
+        required: true
+        default: ""
+      developmentVersion:
+        description: "Define the snapshot version"
+        required: true
+        default: ""
 
 jobs:
   build:
@@ -21,8 +29,8 @@ jobs:
         gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
         gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
 
-    - name: Publish to Apache Maven Central
-      run: mvn --batch-mode deploy
+    - name: Release & Publish to Apache Maven Central
+      run: mvn -U -B -Prelease clean deploy -DreleaseVersion=${{ github.event.inputs.releaseVersion }} -DdevelopmentVersion=${{ github.event.inputs.developmentVersion }} \
       env:
         MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
         MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
