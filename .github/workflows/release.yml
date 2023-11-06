@@ -29,7 +29,6 @@ jobs:
     - name: Maven Release
       uses: qcastel/github-actions-maven-release@v1.12.41
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         ssh-passphrase: ${{ secrets.SSH_PASSPHRASE }}
         gpg-enabled: false
