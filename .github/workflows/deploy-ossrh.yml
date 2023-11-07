@@ -17,7 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v4    
+    - uses: actions/checkout@v4
+    - uses: webfactory/ssh-agent@v0.8.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - run: |
         git config user.email "actions@github.com"
         git config user.name "GitHub Actions"
