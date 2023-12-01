@@ -52,11 +52,11 @@
     </issueManagement>
 
     <properties>
-        <java.release>17</java.release>
+        <java.release>21</java.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <spring-boot.version>3.1.5</spring-boot.version>
+        <spring-boot.version>3.2.0</spring-boot.version>
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
         <maven-javadoc-plugin.version>3.6.0</maven-javadoc-plugin.version>
