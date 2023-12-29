@@ -44,7 +44,7 @@
         <connection>scm:git:ssh://git@github.com/davemeier82/homeautomation-parent.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/davemeier82/homeautomation-parent.git</developerConnection>
         <url>https://github.com/davemeier82/homeautomation-parent</url>
-        <tag>homeautomation-parent-0.2.3-SNAPSHOT</tag>
+        <tag>HEAD</tag>
     </scm>
     <issueManagement>
         <system>GitHub</system>
