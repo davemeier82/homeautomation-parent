@@ -52,18 +52,18 @@
     </issueManagement>
 
     <properties>
-        <java.release>21</java.release>
+        <java.release>25</java.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <spring-boot.version>3.5.3</spring-boot.version>
-        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
-        <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-        <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
-        <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
+        <spring-boot.version>4.0.1</spring-boot.version>
+        <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
+        <maven-source-plugin.version>3.4.0</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>3.12.0</maven-javadoc-plugin.version>
+        <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
         <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
-        <maven-release-plugin.version>3.1.1</maven-release-plugin.version>
-        <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
+        <maven-release-plugin.version>3.3.1</maven-release-plugin.version>
+        <versions-maven-plugin.version>2.20.1</versions-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
